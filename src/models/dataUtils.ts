@@ -19,14 +19,6 @@ export const loadDataFromFile = (): UrlMap => {
   }
 };
 
-// Save the URL mapping object to the file
-/* export const saveDataToFile = (urlMap: UrlMap): void => {
-  try {
-    fs.writeFileSync(dataFilePath, JSON.stringify(urlMap), 'utf8');
-  } catch (error) {
-    console.error('Error saving data:', error);
-  }
-}; */
 export const saveDataToFile = (urlMap: UrlMap): void => {
   try {
     // Load existing data from file
@@ -48,7 +40,6 @@ export const saveDataToFile = (urlMap: UrlMap): void => {
   }
 };
 
-
 // Define the loadDataFromFile function
 export const loadDataFromFile2 = (req: any, res: any) => {
   try {
@@ -60,12 +51,3 @@ export const loadDataFromFile2 = (req: any, res: any) => {
     res.status(500).send('Error loading data');
   }
 };
-
-
-
-
-
-
-
-  
-// export const urlMap = loadDataFromFile();

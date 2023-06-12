@@ -17,18 +17,6 @@ class UrlShortener {
     return key;
   }
 
-  /*shortenOneURL(req: Request, res: Response): void {
-    //const url: string = req.query.url as string;
-    const url: string = req.body.url as string;
-
-    const key: string = this.generateUniqueKey();
-
-    this.urlMap[key] = url;
-    saveDataToFile(this.urlMap);
-
-    res.json({ shortUrl: `http://localhost:3000/shorten/${key}` });
-  }*/
-
   shortenOneURL(req: Request, res: Response): void {
     const url: string = req.body.url as string;
   
@@ -47,22 +35,6 @@ class UrlShortener {
   
     res.json({ shortUrl: `http://localhost:3000/shorten/${key}` });
   }
-
-  /*
-  shortenURL(req: Request, res: Response): void {
-    const urls: string[] = req.body.urls as string[];
-  
-    const shortenedUrls: string[] = [];
-    for (const url of urls) {
-      const key: string = this.generateUniqueKey();
-      this.urlMap[key] = url;
-      saveDataToFile(this.urlMap);
-      shortenedUrls.push(`http://localhost:3000/shorten/${key}`);
-    }
-  
-    res.json({ shortenedUrls });
-  }
-  */
 
   shortenURL(req: Request, res: Response): void {
     const urls: string[] = req.body.urls as string[];
@@ -87,9 +59,6 @@ class UrlShortener {
     res.json({ shortenedUrls });
   }
   
-
-  
-
   redirectToURL(req: Request, res: Response): void {
     const key: string = req.params.key;
 
