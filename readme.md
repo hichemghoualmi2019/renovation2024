@@ -29,8 +29,8 @@ This project is a RESTful API for managing renovation projects, clients, and con
 
 1. **Clone the repository**:
     ```bash
-    git clone <repository_url>
-    cd <repository_folder>
+    git clone https://github.com/hichemghoualmi2019/renovation2024.git
+    cd renovation2024
     ```
 
 2. **Install Dependencies**:
