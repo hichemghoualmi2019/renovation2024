@@ -3,3 +3,8 @@ node_modules/
 
 # Ignore dist directory
 dist/
+
+
+node_modules/
+dist/
+.env
